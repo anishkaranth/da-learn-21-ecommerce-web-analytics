@@ -1,0 +1,11 @@
+entity,raw_rows,distinct_keys,clean_rows,grain
+dim_date,,,92,day
+dim_device,,,25,device category x OS x browser
+dim_geo,,,48,continent x sub-continent x country
+dim_traffic,,,10,first-touch source x medium x campaign
+fact_session,,,526,session
+fact_transaction,,,61,transaction
+purchase events -> transactions,63,63,61,transaction
+raw events (stg_events),12466,12435,12435,event
+sessions,,526,526,user_pseudo_id + ga_session_id
+users,,,322,user_pseudo_id

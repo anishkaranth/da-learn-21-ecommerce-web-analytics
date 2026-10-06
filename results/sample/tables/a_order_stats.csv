@@ -1,0 +1,2 @@
+transactions,mean_usd,median_usd,p90_usd,max_usd,avg_items,outlier_orders,outlier_revenue_usd,outlier_pct_revenue,purchase_event_revenue_usd,duplicate_revenue_removed_usd
+61,54.8,46.0,109.0,179.0,3.61,0,0.0,0.0,3377.0,34.0

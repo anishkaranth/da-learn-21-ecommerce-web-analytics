@@ -1,0 +1,29 @@
+check_name,failed_rows,status
+channel table covers all sessions and revenue,0,PASS
+clean events = distinct valid event keys in staging,0,PASS
+converted sessions all have a purchase event,0,PASS
+daily x device x channel aggregate reconciles to fact_session,0,PASS
+"device_category in {desktop, mobile, tablet}",0,PASS
+dim_date contiguous (rows = days between first and last date),0,PASS
+event key unique in cln_events,0,PASS
+event_date = UTC date of event_timestamp,0,PASS
+events within 2020-11-01..2021-01-31,0,PASS
+every session belongs to one user and has >= 1 event,0,PASS
+fact_session rows = distinct sessions in events,0,PASS
+fact_session.date_key -> dim_date,0,PASS
+fact_session.device_key -> dim_device,0,PASS
+fact_session.geo_key -> dim_geo,0,PASS
+fact_session.traffic_key -> dim_traffic,0,PASS
+fact_transaction rows = cleaned transactions,0,PASS
+fact_transaction.session_key -> fact_session,0,PASS
+funnel purchase step = converting sessions,0,PASS
+funnel strict counts never exceed open counts,0,PASS
+is_engaged and is_bounce are complements,0,PASS
+no negative durations / engagement times,0,PASS
+no repeated header rows left,0,PASS
+session attributes constant within session (device / OS / country / first touch),0,PASS
+session revenue = transaction revenue (total),0,PASS
+session transactions = transaction rows (total),0,PASS
+session_id unique in fact_session,0,PASS
+session_key unique in fact_session,0,PASS
+transaction revenue > 0,0,PASS

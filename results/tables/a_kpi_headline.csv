@@ -1,0 +1,2 @@
+events,users,sessions,sessions_per_user,engaged_sessions,engagement_rate_pct,bounce_rate_pct,pageviews_per_session,avg_engagement_time_s,median_session_span_s,converting_sessions,session_cvr_pct,purchasers,user_cvr_pct,transactions,revenue_usd,aov_usd,revenue_per_session_usd,revenue_per_user_usd,new_session_pct,cart_sessions,cart_abandonment_pct,checkout_abandonment_pct,first_date,last_date,days,countries
+4295584,270154,360129,1.333,320096,88.88,11.12,3.75,70.3,14.0,4446,1.235,4066,1.505,4887,339343.0,69.44,0.9423,1.2561,72.54,15188,83.06,59.97,2020-11-01,2021-01-31,92,108

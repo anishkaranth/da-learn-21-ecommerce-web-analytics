@@ -1,0 +1,9 @@
+entity,column_name,null_pct,treatment
+events,engagement_time_msec,35.167,treated as 0 in session sums
+events,ep_medium (session-scoped medium param),61.206,resolved per session (first non-NULL); sessions with none -> (not set)
+events,ga_session_id,0.0,row dropped if NULL
+events,page_title (page_view events),0.216,landing page = (no page_view)
+events,traffic_medium = (other) / (data deleted) (obfuscated),25.099,kept as own channel values
+purchase events,ecom_revenue_usd,0.0,NULL / 0 revenue -> not a transaction
+purchase events,ecom_transaction_id,3.175,NULL or (not set) -> keyed by session + revenue
+sessions,session source / medium,18.251,session_channel = (not set); first-touch channel always present

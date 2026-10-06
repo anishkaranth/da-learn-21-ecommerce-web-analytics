@@ -1,0 +1,11 @@
+rnk,date,day_name,season,sessions,cvr_pct,transactions,revenue_usd
+1,2020-11-30,Mon,Black Friday-Cyber Monday,4583,2.662,134,11910.0
+2,2020-12-16,Wed,December pre-Christmas,5528,2.08,140,10847.0
+3,2020-12-10,Thu,December pre-Christmas,5993,2.086,138,10835.0
+4,2020-12-09,Wed,December pre-Christmas,6282,2.038,143,10621.0
+5,2020-12-15,Tue,December pre-Christmas,5741,1.968,133,10152.0
+6,2020-12-11,Fri,December pre-Christmas,5607,2.515,151,10129.0
+7,2020-12-07,Mon,December pre-Christmas,5451,1.651,107,8735.0
+8,2020-12-14,Mon,December pre-Christmas,5098,1.589,92,8471.0
+9,2020-12-08,Tue,December pre-Christmas,7562,1.402,116,8197.0
+10,2020-11-25,Wed,Regular,4604,1.781,95,7647.0

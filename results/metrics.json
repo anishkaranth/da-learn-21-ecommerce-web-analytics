@@ -1,0 +1,226 @@
+{
+ "project": "da-learn-21-ecommerce-web-analytics",
+ "dataset": "Google Merchandise Store GA4 obfuscated sample e-commerce event export (bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*, Google Analytics / BigQuery public datasets program), 2020-11-01..2021-01-31, flattened 1:1 to one CSV row per event (4,295,584 events, 60 columns; items[] removed) by D. Gizdevans and mirrored on Hugging Face gizdevans/ga4-bq-flattened-data (MIT on the mirror; upstream is Google's public BigQuery sample). Kaggle copies: pdaasha/ga4-obfuscated-sample-ecommerce-jan2021 (Jan 2021 subset), mexwell/google-merchandise-sales-data (curated subset). Full file 1,844,623,697 B",
+ "source_mode": "full",
+ "kpis": {
+  "events": 4295584,
+  "users": 270154,
+  "sessions": 360129,
+  "sessions_per_user": 1.333,
+  "engaged_sessions": 320096,
+  "engagement_rate_pct": 88.88,
+  "bounce_rate_pct": 11.12,
+  "pageviews_per_session": 3.75,
+  "avg_engagement_time_s": 70.3,
+  "median_session_span_s": 14.0,
+  "converting_sessions": 4446,
+  "session_cvr_pct": 1.235,
+  "purchasers": 4066,
+  "user_cvr_pct": 1.505,
+  "transactions": 4887,
+  "revenue_usd": 339343.0,
+  "aov_usd": 69.44,
+  "revenue_per_session_usd": 0.9423,
+  "revenue_per_user_usd": 1.2561,
+  "new_session_pct": 72.54,
+  "cart_sessions": 15188,
+  "cart_abandonment_pct": 83.06,
+  "checkout_abandonment_pct": 59.97,
+  "first_date": "2020-11-01",
+  "last_date": "2021-01-31",
+  "days": 92,
+  "countries": 108
+ },
+ "analysis_tables": [
+  "tables/a_kpi_headline.csv",
+  "tables/a_funnel.csv",
+  "tables/a_funnel_device.csv",
+  "tables/a_channel.csv",
+  "tables/a_session_channel.csv",
+  "tables/a_device.csv",
+  "tables/a_os.csv",
+  "tables/a_daily.csv",
+  "tables/a_season.csv",
+  "tables/a_monthly.csv",
+  "tables/a_dow_hour.csv",
+  "tables/a_weekday.csv",
+  "tables/a_country.csv",
+  "tables/a_landing_page.csv",
+  "tables/a_new_returning.csv",
+  "tables/a_page_depth.csv",
+  "tables/a_order_value.csv",
+  "tables/a_order_stats.csv",
+  "tables/a_top_days.csv"
+ ],
+ "data_quality": {
+  "row_counts": [
+   {
+    "entity": "raw events (stg_events)",
+    "raw_rows": 4295615,
+    "distinct_keys": 4295584,
+    "clean_rows": 4295584,
+    "grain": "event"
+   },
+   {
+    "entity": "sessions",
+    "raw_rows": null,
+    "distinct_keys": 360129,
+    "clean_rows": 360129,
+    "grain": "user_pseudo_id + ga_session_id"
+   },
+   {
+    "entity": "purchase events -> transactions",
+    "raw_rows": 5692,
+    "distinct_keys": 5242,
+    "clean_rows": 4887,
+    "grain": "transaction"
+   },
+   {
+    "entity": "users",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 270154,
+    "grain": "user_pseudo_id"
+   },
+   {
+    "entity": "fact_session",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 360129,
+    "grain": "session"
+   },
+   {
+    "entity": "fact_transaction",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 4887,
+    "grain": "transaction"
+   },
+   {"entity": "dim_date", "raw_rows": null, "distinct_keys": null, "clean_rows": 92, "grain": "day"},
+   {
+    "entity": "dim_device",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 49,
+    "grain": "device category x OS x browser"
+   },
+   {
+    "entity": "dim_geo",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 122,
+    "grain": "continent x sub-continent x country"
+   },
+   {
+    "entity": "dim_traffic",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 15,
+    "grain": "first-touch source x medium x campaign"
+   }
+  ],
+  "null_rates": [
+   {"entity": "events", "column_name": "ga_session_id", "null_pct": 0.0, "treatment": "row dropped if NULL"},
+   {
+    "entity": "events",
+    "column_name": "ep_medium (session-scoped medium param)",
+    "null_pct": 66.495,
+    "treatment": "resolved per session (first non-NULL); sessions with none -> (not set)"
+   },
+   {
+    "entity": "events",
+    "column_name": "page_title (page_view events)",
+    "null_pct": 0.508,
+    "treatment": "landing page = (no page_view)"
+   },
+   {
+    "entity": "events",
+    "column_name": "engagement_time_msec",
+    "null_pct": 43.388,
+    "treatment": "treated as 0 in session sums"
+   },
+   {
+    "entity": "purchase events",
+    "column_name": "ecom_revenue_usd",
+    "null_pct": 0.0,
+    "treatment": "NULL / 0 revenue -> not a transaction"
+   },
+   {
+    "entity": "purchase events",
+    "column_name": "ecom_transaction_id",
+    "null_pct": 15.917,
+    "treatment": "NULL or (not set) -> keyed by session + revenue"
+   },
+   {
+    "entity": "sessions",
+    "column_name": "session source / medium",
+    "null_pct": 26.256,
+    "treatment": "session_channel = (not set); first-touch channel always present"
+   },
+   {
+    "entity": "events",
+    "column_name": "traffic_medium = (other) / (data deleted) (obfuscated)",
+    "null_pct": 21.217,
+    "treatment": "kept as own channel values"
+   }
+  ],
+  "issues": {
+   "raw: repeated header lines inside the export (dropped)": 31,
+   "events: exact duplicate events dropped": 0,
+   "ga_session_id values shared by 2+ users (key = user + session id)": 9906,
+   "purchase events with revenue 0 / NULL (not transactions)": 450,
+   "purchase events collapsed as repeats of the same transaction": 355,
+   "transactions with missing / (not set) transaction id (kept)": 421,
+   "transaction ids reused across sessions (obfuscation; kept separate)": 15,
+   "transactions flagged revenue outlier (> Q3 + 3 IQR, kept)": 127,
+   "sessions without a session_start event (kept)": 5272,
+   "sessions spanning > 4 h (flagged, kept)": 26,
+   "events with engagement_time > 1 h (flagged, kept)": 10,
+   "converting sessions without add_to_cart event (obfuscation)": 1873,
+   "converting sessions without begin_checkout event": 0,
+   "sessions with 2+ different session mediums (first one used)": 53993,
+   "users whose first-touch medium differs between events (obfuscation)": 41164,
+   "RI: sessions lost in dim joins": 0,
+   "RI: transactions lost in session join": 0
+  },
+  "assertions": {
+   "clean events = distinct valid event keys in staging": "PASS",
+   "no repeated header rows left": "PASS",
+   "event key unique in cln_events": "PASS",
+   "event_date = UTC date of event_timestamp": "PASS",
+   "events within 2020-11-01..2021-01-31": "PASS",
+   "device_category in {desktop, mobile, tablet}": "PASS",
+   "session_key unique in fact_session": "PASS",
+   "session_id unique in fact_session": "PASS",
+   "fact_session rows = distinct sessions in events": "PASS",
+   "session attributes constant within session (device / OS / country / first touch)": "PASS",
+   "fact_session.date_key -> dim_date": "PASS",
+   "fact_session.device_key -> dim_device": "PASS",
+   "fact_session.geo_key -> dim_geo": "PASS",
+   "fact_session.traffic_key -> dim_traffic": "PASS",
+   "fact_transaction.session_key -> fact_session": "PASS",
+   "fact_transaction rows = cleaned transactions": "PASS",
+   "dim_date contiguous (rows = days between first and last date)": "PASS",
+   "transaction revenue > 0": "PASS",
+   "session revenue = transaction revenue (total)": "PASS",
+   "session transactions = transaction rows (total)": "PASS",
+   "converted sessions all have a purchase event": "PASS",
+   "is_engaged and is_bounce are complements": "PASS",
+   "funnel strict counts never exceed open counts": "PASS",
+   "funnel purchase step = converting sessions": "PASS",
+   "channel table covers all sessions and revenue": "PASS",
+   "daily x device x channel aggregate reconciles to fact_session": "PASS",
+   "no negative durations / engagement times": "PASS",
+   "every session belongs to one user and has >= 1 event": "PASS"
+  }
+ },
+ "engine": {"duckdb": "1.5.6", "python": "3.13.5"},
+ "sql_timings_s": {
+  "00_duckdb_compat.sql": 0.002,
+  "01_staging.sql": 2.154,
+  "02_cleaning.sql": 10.115,
+  "03_model.sql": 0.649,
+  "04_analysis.sql": 0.34,
+  "05_quality_checks.sql": 1.38
+ }
+}

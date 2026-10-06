@@ -1,0 +1,288 @@
+{
+ "snapshot": "headline KPIs + run config",
+ "project": "da-learn-21-ecommerce-web-analytics",
+ "source_mode": "sample",
+ "engine": "duckdb 1.5.6",
+ "config": {
+  "sql_dialect": "Spark SQL style (+ DuckDB shims in sql/00), run on DuckDB; Databricks skipped (workspace quota)",
+  "grain": "fact_session = one GA4 session (user_pseudo_id + ga_session_id); fact_transaction = one de-duplicated purchase",
+  "engaged_bounce": "engaged session = any event with session_engaged = 1; bounce rate = 1 - engagement rate (GA4)",
+  "conversion": "session CVR = sessions with >= 1 purchase with revenue > 0 / all sessions",
+  "funnel": "open funnel: sessions that fired each step event (view_item, add_to_cart, begin_checkout, add_shipping_info, add_payment_info, purchase); strict = also fired every earlier step",
+  "channel": "first-touch traffic_source.source/medium grouped GA-style; session_channel from session-scoped source/medium params",
+  "time": "event_date and hours are UTC (export date = UTC date of event_timestamp)",
+  "dedupe": "exact event key; repeat purchase events of the same transaction in a session collapse to one",
+  "sample_rule": "data/raw: all events of every 1000th user (sorted user_pseudo_id) + every 80th purchasing user, plus the repeated header lines (scripts/make_sample.py)"
+ },
+ "headline": {
+  "events": 12435,
+  "users": 322,
+  "sessions": 526,
+  "sessions_per_user": 1.634,
+  "engaged_sessions": 455,
+  "engagement_rate_pct": 86.5,
+  "bounce_rate_pct": 13.5,
+  "pageviews_per_session": 7.036,
+  "avg_engagement_time_s": 178.6,
+  "median_session_span_s": 34.9,
+  "converting_sessions": 58,
+  "session_cvr_pct": 11.027,
+  "purchasers": 56,
+  "user_cvr_pct": 17.391,
+  "transactions": 61,
+  "revenue_usd": 3343.0,
+  "aov_usd": 54.8,
+  "revenue_per_session_usd": 6.3555,
+  "revenue_per_user_usd": 10.382,
+  "new_session_pct": 58.17,
+  "cart_sessions": 73,
+  "cart_abandonment_pct": 52.05,
+  "checkout_abandonment_pct": 21.62,
+  "first_date": "2020-11-01",
+  "last_date": "2021-01-31",
+  "days": 92,
+  "countries": 48
+ },
+ "funnel": [
+  {
+   "step": "0 session",
+   "sessions": 526,
+   "pct_of_sessions": 100.0,
+   "pct_of_previous_step": null,
+   "strict_sessions": 526
+  },
+  {
+   "step": "1 view_item",
+   "sessions": 178,
+   "pct_of_sessions": 33.84,
+   "pct_of_previous_step": 33.84,
+   "strict_sessions": 178
+  },
+  {
+   "step": "2 add_to_cart",
+   "sessions": 73,
+   "pct_of_sessions": 13.878,
+   "pct_of_previous_step": 41.01,
+   "strict_sessions": 73
+  },
+  {
+   "step": "3 begin_checkout",
+   "sessions": 74,
+   "pct_of_sessions": 14.068,
+   "pct_of_previous_step": 101.37,
+   "strict_sessions": 46
+  },
+  {
+   "step": "4 add_shipping_info",
+   "sessions": 74,
+   "pct_of_sessions": 14.068,
+   "pct_of_previous_step": 100.0,
+   "strict_sessions": 46
+  },
+  {
+   "step": "5 add_payment_info",
+   "sessions": 70,
+   "pct_of_sessions": 13.308,
+   "pct_of_previous_step": 94.59,
+   "strict_sessions": 45
+  },
+  {
+   "step": "6 purchase",
+   "sessions": 58,
+   "pct_of_sessions": 11.027,
+   "pct_of_previous_step": 82.86,
+   "strict_sessions": 35
+  }
+ ],
+ "channels": [
+  {
+   "channel_group": "Organic Search",
+   "sessions": 173,
+   "pct_sessions": 32.89,
+   "engagement_rate_pct": 91.33,
+   "cvr_pct": 8.671,
+   "revenue_usd": 889.0,
+   "pct_revenue": 26.59,
+   "aov_usd": 59.27
+  },
+  {
+   "channel_group": "Direct",
+   "sessions": 117,
+   "pct_sessions": 22.24,
+   "engagement_rate_pct": 86.32,
+   "cvr_pct": 11.111,
+   "revenue_usd": 643.0,
+   "pct_revenue": 19.23,
+   "aov_usd": 49.46
+  },
+  {
+   "channel_group": "Obfuscated (<Other>)",
+   "sessions": 69,
+   "pct_sessions": 13.12,
+   "engagement_rate_pct": 91.3,
+   "cvr_pct": 11.594,
+   "revenue_usd": 423.0,
+   "pct_revenue": 12.65,
+   "aov_usd": 42.3
+  },
+  {
+   "channel_group": "Self-referral",
+   "sessions": 53,
+   "pct_sessions": 10.08,
+   "engagement_rate_pct": 73.58,
+   "cvr_pct": 3.774,
+   "revenue_usd": 77.0,
+   "pct_revenue": 2.3,
+   "aov_usd": 38.5
+  },
+  {
+   "channel_group": "Referral",
+   "sessions": 50,
+   "pct_sessions": 9.51,
+   "engagement_rate_pct": 92.0,
+   "cvr_pct": 16.0,
+   "revenue_usd": 553.0,
+   "pct_revenue": 16.54,
+   "aov_usd": 69.13
+  },
+  {
+   "channel_group": "(data deleted)",
+   "sessions": 50,
+   "pct_sessions": 9.51,
+   "engagement_rate_pct": 68.0,
+   "cvr_pct": 20.0,
+   "revenue_usd": 686.0,
+   "pct_revenue": 20.52,
+   "aov_usd": 62.36
+  },
+  {
+   "channel_group": "Paid Search",
+   "sessions": 14,
+   "pct_sessions": 2.66,
+   "engagement_rate_pct": 100.0,
+   "cvr_pct": 14.286,
+   "revenue_usd": 72.0,
+   "pct_revenue": 2.15,
+   "aov_usd": 36.0
+  }
+ ],
+ "devices": [
+  {
+   "device_category": "desktop",
+   "sessions": 282,
+   "pct_sessions": 53.61,
+   "engagement_rate_pct": 87.23,
+   "cvr_pct": 10.638,
+   "revenue_usd": 2033.0,
+   "pct_revenue": 60.81,
+   "aov_usd": 61.61
+  },
+  {
+   "device_category": "mobile",
+   "sessions": 233,
+   "pct_sessions": 44.3,
+   "engagement_rate_pct": 85.41,
+   "cvr_pct": 12.017,
+   "revenue_usd": 1310.0,
+   "pct_revenue": 39.19,
+   "aov_usd": 46.79
+  },
+  {
+   "device_category": "tablet",
+   "sessions": 11,
+   "pct_sessions": 2.09,
+   "engagement_rate_pct": 90.91,
+   "cvr_pct": 0.0,
+   "revenue_usd": 0.0,
+   "pct_revenue": 0.0,
+   "aov_usd": null
+  }
+ ],
+ "months": [
+  {
+   "year_month": "2020-11",
+   "sessions": 151,
+   "cvr_pct": 9.934,
+   "transactions": 15,
+   "revenue_usd": 862.0,
+   "aov_usd": 57.47
+  },
+  {
+   "year_month": "2020-12",
+   "sessions": 230,
+   "cvr_pct": 12.609,
+   "transactions": 32,
+   "revenue_usd": 1813.0,
+   "aov_usd": 56.66
+  },
+  {
+   "year_month": "2021-01",
+   "sessions": 145,
+   "cvr_pct": 9.655,
+   "transactions": 14,
+   "revenue_usd": 668.0,
+   "aov_usd": 47.71
+  }
+ ],
+ "seasons": [
+  {
+   "season": "December pre-Christmas",
+   "days": 23,
+   "sessions_per_day": 8.5,
+   "cvr_pct": 13.776,
+   "revenue_per_day_usd": 74.87,
+   "aov_usd": 57.4
+  },
+  {
+   "season": "Black Friday-Cyber Monday",
+   "days": 4,
+   "sessions_per_day": 6.3,
+   "cvr_pct": 12.0,
+   "revenue_per_day_usd": 30.25,
+   "aov_usd": 40.33
+  },
+  {
+   "season": "Regular",
+   "days": 53,
+   "sessions_per_day": 5.1,
+   "cvr_pct": 9.63,
+   "revenue_per_day_usd": 26.58,
+   "aov_usd": 54.19
+  },
+  {
+   "season": "Christmas-New Year",
+   "days": 9,
+   "sessions_per_day": 3.9,
+   "cvr_pct": 5.714,
+   "revenue_per_day_usd": 10.11,
+   "aov_usd": 45.5
+  }
+ ],
+ "new_vs_returning": [
+  {
+   "user_type": "new",
+   "sessions": 306,
+   "pct_sessions": 58.17,
+   "cvr_pct": 7.516,
+   "pct_revenue": 33.08,
+   "aov_usd": 48.09
+  },
+  {
+   "user_type": "returning",
+   "sessions": 220,
+   "pct_sessions": 41.83,
+   "cvr_pct": 15.909,
+   "pct_revenue": 66.92,
+   "aov_usd": 58.87
+  }
+ ],
+ "top_days": [
+  {"rnk": 1, "date": "2020-12-04", "day_name": "Fri", "sessions": 14, "transactions": 3, "revenue_usd": 262.0},
+  {"rnk": 2, "date": "2020-12-21", "day_name": "Mon", "sessions": 6, "transactions": 2, "revenue_usd": 242.0},
+  {"rnk": 3, "date": "2020-11-25", "day_name": "Wed", "sessions": 11, "transactions": 1, "revenue_usd": 178.0},
+  {"rnk": 4, "date": "2020-11-18", "day_name": "Wed", "sessions": 6, "transactions": 1, "revenue_usd": 176.0},
+  {"rnk": 5, "date": "2020-12-03", "day_name": "Thu", "sessions": 5, "transactions": 3, "revenue_usd": 174.0}
+ ],
+ "assertions_passed": 28,
+ "assertions_total": 28
+}

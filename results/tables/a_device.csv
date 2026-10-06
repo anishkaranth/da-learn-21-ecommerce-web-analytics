@@ -1,0 +1,4 @@
+device_category,sessions,pct_sessions,users,engagement_rate_pct,bounce_rate_pct,pageviews_per_session,avg_engagement_time_s,add_to_cart_rate_pct,cart_to_purchase_pct,converting_sessions,cvr_pct,transactions,revenue_usd,pct_revenue,aov_usd
+desktop,208942,58.02,158917,88.92,11.08,3.76,69.8,4.21,28.81,2532,1.212,2806,196789.0,57.99,70.13
+mobile,143185,39.76,109195,88.82,11.18,3.74,71.4,4.24,30.0,1823,1.273,1989,136601.0,40.25,68.68
+tablet,8002,2.22,6250,88.99,11.01,3.67,65.3,4.01,28.35,91,1.137,92,5953.0,1.75,64.71

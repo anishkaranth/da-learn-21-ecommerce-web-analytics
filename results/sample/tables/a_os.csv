@@ -1,0 +1,7 @@
+device_os,sessions,engagement_rate_pct,cvr_pct,revenue_usd,aov_usd
+(other),7,85.71,14.286,89.0,89.0
+Android,60,80.0,13.333,370.0,46.25
+Macintosh,37,89.19,13.514,465.0,93.0
+Web,318,86.79,9.748,1717.0,50.5
+Windows,45,91.11,8.889,356.0,89.0
+iOS,59,86.44,15.254,346.0,38.44

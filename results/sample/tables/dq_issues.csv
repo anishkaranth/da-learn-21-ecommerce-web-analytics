@@ -1,0 +1,18 @@
+check_name,affected_rows
+RI: sessions lost in dim joins,0
+RI: transactions lost in session join,0
+converting sessions without add_to_cart event (obfuscation),23
+converting sessions without begin_checkout event,0
+"events with engagement_time > 1 h (flagged, kept)",0
+events: exact duplicate events dropped,0
+ga_session_id values shared by 2+ users (key = user + session id),0
+purchase events collapsed as repeats of the same transaction,2
+purchase events with revenue 0 / NULL (not transactions),0
+raw: repeated header lines inside the export (dropped),31
+"sessions spanning > 4 h (flagged, kept)",0
+sessions with 2+ different session mediums (first one used),118
+sessions without a session_start event (kept),10
+transaction ids reused across sessions (obfuscation; kept separate),0
+"transactions flagged revenue outlier (> Q3 + 3 IQR, kept)",0
+transactions with missing / (not set) transaction id (kept),2
+users whose first-touch medium differs between events (obfuscation),78

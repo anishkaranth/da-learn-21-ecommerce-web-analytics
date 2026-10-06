@@ -1,0 +1,22 @@
+device_category,step_no,step,sessions,pct_of_device_sessions
+desktop,0,0 session,208942,100.0
+desktop,1,1 view_item,44819,21.45
+desktop,2,2 add_to_cart,8790,4.207
+desktop,3,3 begin_checkout,6392,3.059
+desktop,4,4 add_shipping_info,6390,3.058
+desktop,5,5 add_payment_info,3885,1.859
+desktop,6,6 purchase,2532,1.212
+mobile,0,0 session,143185,100.0
+mobile,1,1 view_item,30501,21.302
+mobile,2,2 add_to_cart,6077,4.244
+mobile,3,3 begin_checkout,4474,3.125
+mobile,4,4 add_shipping_info,4475,3.125
+mobile,5,5 add_payment_info,2778,1.94
+mobile,6,6 purchase,1823,1.273
+tablet,0,0 session,8002,100.0
+tablet,1,1 view_item,1700,21.245
+tablet,2,2 add_to_cart,321,4.011
+tablet,3,3 begin_checkout,240,2.999
+tablet,4,4 add_shipping_info,240,2.999
+tablet,5,5 add_payment_info,152,1.9
+tablet,6,6 purchase,91,1.137

@@ -1,0 +1,90 @@
+date,day_name,season,sessions,users,engagement_rate_pct,converting_sessions,cvr_pct,transactions,revenue_usd
+2020-11-01,Sun,Regular,2,2,100.0,0,0.0,0,0.0
+2020-11-02,Mon,Regular,3,3,66.67,0,0.0,0,0.0
+2020-11-03,Tue,Regular,8,6,75.0,0,0.0,0,0.0
+2020-11-04,Wed,Regular,3,3,100.0,0,0.0,0,0.0
+2020-11-05,Thu,Regular,7,7,100.0,0,0.0,0,0.0
+2020-11-06,Fri,Regular,3,3,100.0,0,0.0,0,0.0
+2020-11-07,Sat,Regular,5,5,60.0,0,0.0,0,0.0
+2020-11-09,Mon,Regular,6,4,66.67,2,33.333,2,38.0
+2020-11-10,Tue,Regular,2,2,50.0,0,0.0,0,0.0
+2020-11-11,Wed,Regular,4,4,100.0,1,25.0,1,1.0
+2020-11-12,Thu,Regular,6,6,83.33,1,16.667,1,16.0
+2020-11-13,Fri,Regular,5,3,80.0,1,20.0,1,55.0
+2020-11-14,Sat,Regular,2,2,100.0,1,50.0,1,127.0
+2020-11-15,Sun,Regular,7,6,85.71,0,0.0,0,0.0
+2020-11-16,Mon,Regular,8,5,87.5,2,25.0,2,98.0
+2020-11-17,Tue,Regular,11,9,81.82,0,0.0,0,0.0
+2020-11-18,Wed,Regular,6,5,83.33,1,16.667,1,176.0
+2020-11-19,Thu,Regular,4,2,100.0,0,0.0,0,0.0
+2020-11-20,Fri,Regular,4,4,100.0,0,0.0,0,0.0
+2020-11-21,Sat,Regular,4,3,50.0,0,0.0,0,0.0
+2020-11-23,Mon,Regular,4,4,100.0,0,0.0,0,0.0
+2020-11-24,Tue,Regular,7,4,100.0,1,14.286,1,24.0
+2020-11-25,Wed,Regular,11,10,72.73,1,9.091,1,178.0
+2020-11-26,Thu,Regular,4,4,100.0,1,25.0,1,28.0
+2020-11-27,Fri,Black Friday-Cyber Monday,7,7,100.0,1,14.286,1,46.0
+2020-11-28,Sat,Black Friday-Cyber Monday,6,6,100.0,0,0.0,0,0.0
+2020-11-29,Sun,Black Friday-Cyber Monday,4,2,50.0,0,0.0,0,0.0
+2020-11-30,Mon,Black Friday-Cyber Monday,8,7,100.0,2,25.0,2,75.0
+2020-12-01,Tue,December pre-Christmas,11,8,72.73,2,18.182,2,152.0
+2020-12-02,Wed,December pre-Christmas,5,5,80.0,0,0.0,0,0.0
+2020-12-03,Thu,December pre-Christmas,5,5,100.0,2,40.0,3,174.0
+2020-12-04,Fri,December pre-Christmas,14,10,85.71,3,21.429,3,262.0
+2020-12-05,Sat,December pre-Christmas,2,2,50.0,0,0.0,0,0.0
+2020-12-06,Sun,December pre-Christmas,5,4,60.0,0,0.0,0,0.0
+2020-12-07,Mon,December pre-Christmas,2,2,100.0,0,0.0,0,0.0
+2020-12-08,Tue,December pre-Christmas,7,6,85.71,0,0.0,0,0.0
+2020-12-09,Wed,December pre-Christmas,12,11,75.0,1,8.333,1,109.0
+2020-12-10,Thu,December pre-Christmas,13,9,84.62,2,15.385,4,58.0
+2020-12-11,Fri,December pre-Christmas,13,11,84.62,0,0.0,0,0.0
+2020-12-12,Sat,December pre-Christmas,13,11,84.62,2,15.385,2,108.0
+2020-12-13,Sun,December pre-Christmas,6,2,50.0,2,33.333,2,163.0
+2020-12-14,Mon,December pre-Christmas,14,10,71.43,2,14.286,2,55.0
+2020-12-15,Tue,December pre-Christmas,10,9,90.0,3,30.0,3,107.0
+2020-12-16,Wed,December pre-Christmas,9,7,88.89,4,44.444,4,140.0
+2020-12-17,Thu,December pre-Christmas,15,12,93.33,0,0.0,0,0.0
+2020-12-18,Fri,December pre-Christmas,9,9,88.89,2,22.222,2,152.0
+2020-12-19,Sat,December pre-Christmas,10,7,50.0,0,0.0,0,0.0
+2020-12-20,Sun,December pre-Christmas,2,2,100.0,0,0.0,0,0.0
+2020-12-21,Mon,December pre-Christmas,6,5,100.0,2,33.333,2,242.0
+2020-12-22,Tue,December pre-Christmas,8,7,87.5,0,0.0,0,0.0
+2020-12-23,Wed,December pre-Christmas,5,5,100.0,0,0.0,0,0.0
+2020-12-24,Thu,Christmas-New Year,4,3,75.0,1,25.0,1,48.0
+2020-12-25,Fri,Christmas-New Year,5,5,100.0,0,0.0,0,0.0
+2020-12-26,Sat,Christmas-New Year,3,3,100.0,0,0.0,0,0.0
+2020-12-27,Sun,Christmas-New Year,4,4,100.0,0,0.0,0,0.0
+2020-12-28,Mon,Christmas-New Year,7,6,100.0,1,14.286,1,43.0
+2020-12-29,Tue,Christmas-New Year,5,5,100.0,0,0.0,0,0.0
+2020-12-30,Wed,Christmas-New Year,2,1,100.0,0,0.0,0,0.0
+2020-12-31,Thu,Christmas-New Year,4,4,100.0,0,0.0,0,0.0
+2021-01-01,Fri,Christmas-New Year,1,1,100.0,0,0.0,0,0.0
+2021-01-02,Sat,Regular,1,1,100.0,0,0.0,0,0.0
+2021-01-03,Sun,Regular,7,3,100.0,1,14.286,1,14.0
+2021-01-04,Mon,Regular,7,7,100.0,0,0.0,0,0.0
+2021-01-05,Tue,Regular,8,7,75.0,2,25.0,2,87.0
+2021-01-06,Wed,Regular,7,7,100.0,1,14.286,1,46.0
+2021-01-07,Thu,Regular,8,7,100.0,0,0.0,0,0.0
+2021-01-08,Fri,Regular,3,3,66.67,0,0.0,0,0.0
+2021-01-09,Sat,Regular,1,1,100.0,0,0.0,0,0.0
+2021-01-10,Sun,Regular,1,1,100.0,0,0.0,0,0.0
+2021-01-11,Mon,Regular,6,6,100.0,1,16.667,1,11.0
+2021-01-12,Tue,Regular,8,8,100.0,1,12.5,1,46.0
+2021-01-13,Wed,Regular,4,3,100.0,2,50.0,2,100.0
+2021-01-14,Thu,Regular,4,4,75.0,0,0.0,0,0.0
+2021-01-15,Fri,Regular,5,5,100.0,1,20.0,1,46.0
+2021-01-16,Sat,Regular,3,3,100.0,0,0.0,0,0.0
+2021-01-17,Sun,Regular,7,7,100.0,0,0.0,0,0.0
+2021-01-18,Mon,Regular,3,3,100.0,0,0.0,0,0.0
+2021-01-19,Tue,Regular,3,3,100.0,0,0.0,0,0.0
+2021-01-20,Wed,Regular,7,6,85.71,2,28.571,2,120.0
+2021-01-21,Thu,Regular,6,4,66.67,0,0.0,0,0.0
+2021-01-22,Fri,Regular,11,7,81.82,2,18.182,2,114.0
+2021-01-23,Sat,Regular,3,2,100.0,1,33.333,1,84.0
+2021-01-24,Sun,Regular,3,3,66.67,0,0.0,0,0.0
+2021-01-25,Mon,Regular,3,3,100.0,0,0.0,0,0.0
+2021-01-26,Tue,Regular,8,7,87.5,0,0.0,0,0.0
+2021-01-27,Wed,Regular,8,7,87.5,0,0.0,0,0.0
+2021-01-28,Thu,Regular,2,2,100.0,0,0.0,0,0.0
+2021-01-29,Fri,Regular,6,5,100.0,0,0.0,0,0.0
+2021-01-31,Sun,Regular,1,1,100.0,0,0.0,0,0.0

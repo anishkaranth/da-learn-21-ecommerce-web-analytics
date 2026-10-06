@@ -1,0 +1,5 @@
+season,days,sessions,sessions_per_day,cvr_pct,transactions,revenue_usd,revenue_per_day_usd,aov_usd
+Black Friday-Cyber Monday,4,25,6.3,12.0,3,121.0,30.25,40.33
+Christmas-New Year,9,35,3.9,5.714,2,91.0,10.11,45.5
+December pre-Christmas,23,196,8.5,13.776,30,1722.0,74.87,57.4
+Regular,53,270,5.1,9.63,26,1409.0,26.58,54.19

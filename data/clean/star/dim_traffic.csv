@@ -1,0 +1,16 @@
+traffic_key,source,medium,campaign,channel_group
+1,(data deleted),(data deleted),(data deleted),(data deleted)
+2,(data deleted),(data deleted),(other),(data deleted)
+3,(data deleted),referral,(referral),Referral
+4,(direct),(none),(direct),Direct
+5,(other),(data deleted),(data deleted),(data deleted)
+6,(other),(other),(data deleted),Obfuscated (<Other>)
+7,(other),(other),(other),Obfuscated (<Other>)
+8,(other),cpc,(other),Paid Search
+9,(other),organic,(organic),Organic Search
+10,(other),referral,(other),Referral
+11,(other),referral,(referral),Referral
+12,google,(other),(other),Obfuscated (<Other>)
+13,google,cpc,(other),Paid Search
+14,google,organic,(organic),Organic Search
+15,shop.googlemerchandisestore.com,referral,(referral),Self-referral

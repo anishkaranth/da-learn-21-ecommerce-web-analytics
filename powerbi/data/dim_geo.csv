@@ -1,0 +1,123 @@
+geo_key,continent,sub_continent,country
+1,(not set),(not set),(not set)
+2,Africa,Eastern Africa,(not set)
+3,Africa,Eastern Africa,Kenya
+4,Africa,Middle Africa,(not set)
+5,Africa,Northern Africa,Algeria
+6,Africa,Northern Africa,Egypt
+7,Africa,Northern Africa,Morocco
+8,Africa,Northern Africa,Tunisia
+9,Africa,Southern Africa,South Africa
+10,Africa,Western Africa,(not set)
+11,Africa,Western Africa,Ghana
+12,Africa,Western Africa,Nigeria
+13,Americas,Caribbean,(not set)
+14,Americas,Caribbean,Bahamas
+15,Americas,Caribbean,Dominican Republic
+16,Americas,Caribbean,Jamaica
+17,Americas,Caribbean,Puerto Rico
+18,Americas,Caribbean,Trinidad & Tobago
+19,Americas,Central America,(not set)
+20,Americas,Central America,Costa Rica
+21,Americas,Central America,El Salvador
+22,Americas,Central America,Guatemala
+23,Americas,Central America,Honduras
+24,Americas,Central America,Mexico
+25,Americas,Central America,Panama
+26,Americas,Northern America,Canada
+27,Americas,Northern America,United States
+28,Americas,South America,(not set)
+29,Americas,South America,Argentina
+30,Americas,South America,Bolivia
+31,Americas,South America,Brazil
+32,Americas,South America,Chile
+33,Americas,South America,Colombia
+34,Americas,South America,Ecuador
+35,Americas,South America,Paraguay
+36,Americas,South America,Peru
+37,Americas,South America,Uruguay
+38,Americas,South America,Venezuela
+39,Asia,Central Asia,(not set)
+40,Asia,Central Asia,Kazakhstan
+41,Asia,Eastern Asia,China
+42,Asia,Eastern Asia,Hong Kong
+43,Asia,Eastern Asia,Japan
+44,Asia,Eastern Asia,Macao
+45,Asia,Eastern Asia,Mongolia
+46,Asia,Eastern Asia,South Korea
+47,Asia,Eastern Asia,Taiwan
+48,Asia,Southeast Asia,(not set)
+49,Asia,Southeast Asia,Cambodia
+50,Asia,Southeast Asia,Indonesia
+51,Asia,Southeast Asia,Malaysia
+52,Asia,Southeast Asia,Myanmar (Burma)
+53,Asia,Southeast Asia,Philippines
+54,Asia,Southeast Asia,Singapore
+55,Asia,Southeast Asia,Thailand
+56,Asia,Southeast Asia,Vietnam
+57,Asia,Southern Asia,(not set)
+58,Asia,Southern Asia,Bangladesh
+59,Asia,Southern Asia,India
+60,Asia,Southern Asia,Nepal
+61,Asia,Southern Asia,Pakistan
+62,Asia,Southern Asia,Sri Lanka
+63,Asia,Western Asia,(not set)
+64,Asia,Western Asia,Armenia
+65,Asia,Western Asia,Azerbaijan
+66,Asia,Western Asia,Bahrain
+67,Asia,Western Asia,Cyprus
+68,Asia,Western Asia,Georgia
+69,Asia,Western Asia,Iraq
+70,Asia,Western Asia,Israel
+71,Asia,Western Asia,Jordan
+72,Asia,Western Asia,Kuwait
+73,Asia,Western Asia,Lebanon
+74,Asia,Western Asia,Oman
+75,Asia,Western Asia,Palestine
+76,Asia,Western Asia,Qatar
+77,Asia,Western Asia,Saudi Arabia
+78,Asia,Western Asia,Turkey
+79,Asia,Western Asia,United Arab Emirates
+80,Europe,Eastern Europe,(not set)
+81,Europe,Eastern Europe,Belarus
+82,Europe,Eastern Europe,Bulgaria
+83,Europe,Eastern Europe,Czechia
+84,Europe,Eastern Europe,Hungary
+85,Europe,Eastern Europe,Poland
+86,Europe,Eastern Europe,Romania
+87,Europe,Eastern Europe,Russia
+88,Europe,Eastern Europe,Slovakia
+89,Europe,Eastern Europe,Ukraine
+90,Europe,Northern Europe,(not set)
+91,Europe,Northern Europe,Denmark
+92,Europe,Northern Europe,Estonia
+93,Europe,Northern Europe,Finland
+94,Europe,Northern Europe,Iceland
+95,Europe,Northern Europe,Ireland
+96,Europe,Northern Europe,Latvia
+97,Europe,Northern Europe,Lithuania
+98,Europe,Northern Europe,Norway
+99,Europe,Northern Europe,Sweden
+100,Europe,Northern Europe,United Kingdom
+101,Europe,Southern Europe,(not set)
+102,Europe,Southern Europe,Albania
+103,Europe,Southern Europe,Bosnia & Herzegovina
+104,Europe,Southern Europe,Croatia
+105,Europe,Southern Europe,Greece
+106,Europe,Southern Europe,Italy
+107,Europe,Southern Europe,Kosovo
+108,Europe,Southern Europe,Malta
+109,Europe,Southern Europe,North Macedonia
+110,Europe,Southern Europe,Portugal
+111,Europe,Southern Europe,Serbia
+112,Europe,Southern Europe,Slovenia
+113,Europe,Southern Europe,Spain
+114,Europe,Western Europe,Austria
+115,Europe,Western Europe,Belgium
+116,Europe,Western Europe,France
+117,Europe,Western Europe,Germany
+118,Europe,Western Europe,Luxembourg
+119,Europe,Western Europe,Netherlands
+120,Europe,Western Europe,Switzerland
+121,Oceania,Australasia,Australia
+122,Oceania,Australasia,New Zealand

@@ -1,0 +1,50 @@
+device_key,device_category,device_os,browser
+1,desktop,(other),(other)
+2,desktop,(other),Chrome
+3,desktop,(other),Edge
+4,desktop,(other),Firefox
+5,desktop,(other),Safari
+6,desktop,Macintosh,(other)
+7,desktop,Macintosh,Chrome
+8,desktop,Macintosh,Edge
+9,desktop,Macintosh,Firefox
+10,desktop,Macintosh,Safari
+11,desktop,Web,(other)
+12,desktop,Web,Chrome
+13,desktop,Web,Edge
+14,desktop,Web,Firefox
+15,desktop,Web,Safari
+16,desktop,Windows,(other)
+17,desktop,Windows,Chrome
+18,desktop,Windows,Edge
+19,desktop,Windows,Firefox
+20,desktop,Windows,Safari
+21,mobile,(other),(other)
+22,mobile,(other),Chrome
+23,mobile,(other),Safari
+24,mobile,Android,(other)
+25,mobile,Android,Android Webview
+26,mobile,Android,Chrome
+27,mobile,Android,Firefox
+28,mobile,Web,(other)
+29,mobile,Web,Android Webview
+30,mobile,Web,Chrome
+31,mobile,Web,Edge
+32,mobile,Web,Firefox
+33,mobile,Web,Safari
+34,mobile,Windows,Edge
+35,mobile,iOS,(other)
+36,mobile,iOS,Chrome
+37,mobile,iOS,Safari
+38,tablet,(other),(other)
+39,tablet,Android,(other)
+40,tablet,Android,Android Webview
+41,tablet,Android,Chrome
+42,tablet,Web,(other)
+43,tablet,Web,Android Webview
+44,tablet,Web,Chrome
+45,tablet,Web,Safari
+46,tablet,Windows,(other)
+47,tablet,iOS,(other)
+48,tablet,iOS,Chrome
+49,tablet,iOS,Safari

@@ -1,0 +1,76 @@
+// measures.dax  Paste into Power BI one measure at a time. Definitions match sql/04_analysis.sql.
+// Home table in brackets. A = agg_daily_device_channel (FULL, exact), S = fact_session_sample (1-in-20 sample), T = fact_transaction (FULL).
+
+// ---------- agg_daily_device_channel (full totals) ----------
+Sessions = SUM ( agg_daily_device_channel[sessions] )
+
+Engaged Sessions = SUM ( agg_daily_device_channel[engaged_sessions] )
+
+Engagement Rate % = DIVIDE ( [Engaged Sessions], [Sessions] ) * 100
+
+Bounce Rate % = 100 - [Engagement Rate %]
+
+Converting Sessions = SUM ( agg_daily_device_channel[converting_sessions] )
+
+Session CVR % = DIVIDE ( [Converting Sessions], [Sessions] ) * 100
+
+Transactions = SUM ( agg_daily_device_channel[transactions] )
+
+Revenue (US$) = SUM ( agg_daily_device_channel[revenue_usd] )
+
+AOV (US$) = DIVIDE ( [Revenue (US$)], [Transactions] )
+
+Revenue per Session (US$) = DIVIDE ( [Revenue (US$)], [Sessions] )
+
+Pageviews per Session = DIVIDE ( SUM ( agg_daily_device_channel[page_views] ), [Sessions] )
+
+View Item Sessions = SUM ( agg_daily_device_channel[view_item_sessions] )
+
+Add to Cart Sessions = SUM ( agg_daily_device_channel[add_to_cart_sessions] )
+
+Begin Checkout Sessions = SUM ( agg_daily_device_channel[begin_checkout_sessions] )
+
+Add Shipping Sessions = SUM ( agg_daily_device_channel[add_shipping_info_sessions] )
+
+Add Payment Sessions = SUM ( agg_daily_device_channel[add_payment_info_sessions] )
+
+Add to Cart Rate % = DIVIDE ( [Add to Cart Sessions], [Sessions] ) * 100
+
+Cart to Purchase % = DIVIDE ( [Converting Sessions], [Add to Cart Sessions] ) * 100
+
+// share of the visible total (e.g. revenue share by channel in a bar chart)
+Revenue Share % =
+DIVIDE ( [Revenue (US$)], CALCULATE ( [Revenue (US$)], REMOVEFILTERS ( agg_daily_device_channel[channel_group], agg_daily_device_channel[device_category] ) ) ) * 100
+
+Session Share % =
+DIVIDE ( [Sessions], CALCULATE ( [Sessions], REMOVEFILTERS ( agg_daily_device_channel[channel_group], agg_daily_device_channel[device_category] ) ) ) * 100
+
+// note: users are counted per day x device x channel in the aggregate, so SUM(users) over many days over-counts distinct users.
+// Distinct users for the whole period = 270,154 (results/metrics.json).
+
+// ---------- fact_transaction (full) ----------
+Orders = COUNTROWS ( fact_transaction )
+
+Order Revenue (US$) = SUM ( fact_transaction[revenue_usd] )
+
+Median Order (US$) = MEDIAN ( fact_transaction[revenue_usd] )
+
+Avg Items per Order = AVERAGE ( fact_transaction[item_qty] )
+
+Outlier Orders = CALCULATE ( COUNTROWS ( fact_transaction ), fact_transaction[dq_revenue_outlier] = 1 )
+
+// ---------- fact_session_sample (1-in-20 sample; for drill-downs) ----------
+Sample Sessions = COUNTROWS ( fact_session_sample )
+
+Sample CVR % = DIVIDE ( SUM ( fact_session_sample[is_converted] ), [Sample Sessions] ) * 100
+
+Sample Bounce Rate % = AVERAGE ( fact_session_sample[is_bounce] ) * 100
+
+Sample Revenue (US$) = SUM ( fact_session_sample[revenue_usd] )
+
+Sample Add to Cart Rate % = AVERAGE ( fact_session_sample[has_add_to_cart] ) * 100
+
+Sample Avg Engagement (s) = AVERAGE ( fact_session_sample[engagement_time_s] )
+
+// scale a sample count back to an estimate of the full population (every 20th session)
+Est. Sessions (from sample) = [Sample Sessions] * 20
